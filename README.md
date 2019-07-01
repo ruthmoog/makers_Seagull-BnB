@@ -38,5 +38,24 @@ I want my property listing to be displayed
 - semantic HTML
 - CSS
 - [Heroku](https://www.heroku.com/)
-- Jasmine
+- [Jasmine](https://jasmine.github.io/setup/nodejs.html)
 - ES Lint
+
+
+## Testing
+
+### Set Up
+
+Edit the `./package.json` file so that the `test` path reads:
+
+```
+"test": "./node_modules/jasmine/bin/jasmine.js"
+```
+
+### Running Tests
+
+Use the npm command in the command line:
+
+```shell
+$ npm test
+```
