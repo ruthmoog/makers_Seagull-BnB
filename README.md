@@ -52,11 +52,13 @@ I want my property to be unavailable once booked
 - [Heroku](https://www.heroku.com/)
 - [Jasmine](https://jasmine.github.io/setup/nodejs.html)
 - ES Lint
+- Cypress
 
 
-## Testing
+## Set Up
 
-### Set Up
+Install Node.js
+Install NPM
 
 Edit the `./package.json` file so that the `test` path reads:
 
