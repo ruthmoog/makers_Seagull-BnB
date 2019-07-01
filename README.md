@@ -28,6 +28,18 @@ so that other users can see my property
 I want my property listing to be displayed
 ```
 
+```
+As a user
+so that I can holiday \o/
+I want to book a property
+```
+
+```
+As a user
+So that my property is not double-booked
+I want my property to be unavailable once booked
+```
+
 ## Technology
 
 - Node.js
