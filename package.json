@@ -1,0 +1,22 @@
+{
+  "name": "seagull-bnb",
+  "version": "1.0.0",
+  "description": "An accomodation listing and booking site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruthmoog/Seagull-BnB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruthmoog/Seagull-BnB/issues"
+  },
+  "homepage": "https://github.com/ruthmoog/Seagull-BnB#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
