@@ -75,11 +75,19 @@ $ npm test
 ```
 
 Integration tests are located in `./cypress/integration`.
+
+Install Cypress:
+```shell
+$ npm install cypress --save-dev
+```
+
 Open Cypress with the command below to run end-to-end tests:
 
 ```shell
 $ npx cypress open
 ```
+
+![](https://thepracticaldev.s3.amazonaws.com/i/bku3lxtqjklrlx6d9nwx.png)
 
 
 ### Note
