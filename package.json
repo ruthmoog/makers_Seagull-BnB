@@ -19,5 +19,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "jasmine": "^3.4.0"
+  },
+  "devDependencies": {
+    "cypress": "^3.3.2"
   }
 }
