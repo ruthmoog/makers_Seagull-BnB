@@ -68,8 +68,20 @@ Edit the `./package.json` file so that the `test` path reads:
 
 ### Running Tests
 
-Use the npm command in the command line:
+Use the npm command in the command line to run Jasmine:
 
 ```shell
 $ npm test
 ```
+
+Integration tests are located in `./cypress/integration`.
+Open Cypress with the command below to run end-to-end tests:
+
+```shell
+$ npx cypress open
+```
+
+
+### Note
+
+.bak contains back-up files, no peeking.
