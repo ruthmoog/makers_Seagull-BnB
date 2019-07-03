@@ -1,3 +1,5 @@
+$array = []
+
 class Listing
   attr_reader :name, :description
 
@@ -17,7 +19,9 @@ def self.create(name:, description:)
   listing
 end
 
-
+def self.all
+  $array
 end
 
-$array = []
+
+end

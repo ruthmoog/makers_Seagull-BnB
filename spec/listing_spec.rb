@@ -20,5 +20,19 @@ describe Listing do
     end
   end
 
+  describe '.all' do
+    it 'Can return all instances of listing' do
+      $array = []
+      listing1 = Listing.create(name: 'Seagull Cottage', description: '4 Stars')
+      listing2 = Listing.create(name: 'Sea Shanty', description: '0 Stars')
+
+      listings = Listing.all
+
+      expect(listings.length).to eq 2
+      expect(listings[0]).to eq listing1
+      expect(listings[1].name).to eq 'Sea Shanty'
+    end
+  end
+
 
 end
