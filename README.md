@@ -51,4 +51,12 @@ I want my property to be unavailable once booked
 
 ## Set Up
 
-To be continued...
+In the terminal use bundle to download the required gems:
+```shell
+$ bundle install
+```
+
+Run all tests in the terminal with RSpec:
+```shell
+$ rspec
+```
