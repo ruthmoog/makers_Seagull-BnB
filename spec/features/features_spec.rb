@@ -10,8 +10,4 @@ feature 'Hello Seagull!' do
     expect(page).to have_content('Display')
   end
 
-
-
-
-
 end
