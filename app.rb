@@ -1,6 +1,6 @@
 require 'sinatra/base'
 
-class Listing <Sinatra::Base
+class Listing_manager <Sinatra::Base
 
   get '/' do
     erb :'index'

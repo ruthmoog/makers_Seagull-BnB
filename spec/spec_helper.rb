@@ -6,7 +6,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
-Capybara.app = Listing
+Capybara.app = Listing_manager
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
