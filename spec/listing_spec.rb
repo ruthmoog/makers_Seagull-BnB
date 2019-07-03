@@ -34,5 +34,14 @@ describe Listing do
     end
   end
 
+  describe '#reserve_switch' do
+    it'Can switch the state of @reserved' do
+      listing = Listing.new(name: 'Seagull Cottage', description: '4 Stars')
+      expect(listing.reserved?).to eq(false)
+      listing.reserve_switch
+      expect(listing.reserved?).to eq(true)
+    end
+  end
+
 
 end

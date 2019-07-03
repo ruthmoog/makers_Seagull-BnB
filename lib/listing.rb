@@ -23,5 +23,9 @@ def self.all
   $array
 end
 
+def reserve_switch
+  reserved? ? @reserved = false : @reserved = true
+end
+
 
 end
