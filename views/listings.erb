@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<ul>
+  <% @listings.each do |listing| %>
+    <li class="listing_name">
+      <%= listing.name %>
+      <br><br>
+      <%= listing.description %>
+    </li>
+  <% end %>
+</ul>

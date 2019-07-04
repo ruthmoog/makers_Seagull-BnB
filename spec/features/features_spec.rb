@@ -6,8 +6,8 @@ feature 'Hello Seagull!' do
 
   scenario "visit index page" do
     visit('/')
-    find_link('Display').visible?
-    expect(page).to have_content('Display')
+    find_link('Listings').visible?
+    expect(page).to have_content('Listings')
   end
 
 end
