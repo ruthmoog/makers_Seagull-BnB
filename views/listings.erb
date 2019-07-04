@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <ul>
+  <form action="/listings/new" method="get">
+   <input type="submit" value="Create new listing" />
+  </form>
   <% @listings.each do |listing| %>
     <li class="listing_name">
       <%= listing.name %>
