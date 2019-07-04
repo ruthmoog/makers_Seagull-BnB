@@ -2,6 +2,9 @@
 
 source "https://rubygems.org"
 
-gem 'rspec'
-gem 'capybara'
 gem 'sinatra'
+
+gem 'capybara', group: :test 
+gem 'rspec', group: :test 
+
+gem 'pg', group: :database

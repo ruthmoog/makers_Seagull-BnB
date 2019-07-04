@@ -1,3 +1,4 @@
+require 'pg'
 $array = []
 
 class Listing
@@ -20,7 +21,9 @@ def self.create(name:, description:)
 end
 
 def self.all
-  $array
+  connection = PG.connect(dbname: 'seagull')
+  result = connection.exec('SELECT * FROM listings')
+  result.map { |listing| listing['name'] }
 end
 
 def reserve_switch

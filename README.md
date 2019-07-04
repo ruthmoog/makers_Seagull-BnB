@@ -51,4 +51,16 @@ I want my property to be unavailable once booked
 
 ## Set Up
 
-To be continued...
+### How to create a database using PSQL 
+ - download Postgresql
+ - Connect to psql in terminal with `psql`
+ - Create the database using the psql command `CREATE DATABASE seagull;`
+ - Connect to the database using the pqsl command `\c seagull`
+ - Run the query we have saved in the file `migrations/01_create_listings_table.sql`
+
+### Creating a test database
+This is required to run the tests
+ - Connect to psql in terminal with `psql`
+ - Create the database using the psql command `CREATE DATABASE seagull_test;`
+ - Connect to the database using the pqsl command `\c seagull_test`
+ - Run the query in `migrations/01_create_listings_table.sql`
