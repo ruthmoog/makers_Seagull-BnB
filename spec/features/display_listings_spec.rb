@@ -14,4 +14,10 @@ feature 'displaying all istings' do
     expect(page).to have_content 'Seagull Cottage'
     expect(page).to have_content '0 Stars'
   end
+
+  scenario 'after you add a listing click button create new listing' do
+    visit '/listings'
+    click_button 'Create new listing'
+    expect(current_path).to eq '/listings/new'
+  end
 end
