@@ -11,6 +11,7 @@ describe Listing do
 
   describe '.create' do
     it 'Can create a new instance of listing' do
+      $array = []
       listing = Listing.create(name: 'Seagull Cottage', description: '4 Stars')
 
       expect(listing).to be_a Listing
