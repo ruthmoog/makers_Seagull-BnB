@@ -2,9 +2,10 @@ require 'pg'
 $array = []
 
 class Listing
-  attr_reader :name, :description
+  attr_reader :id, :name, :description
 
-  def initialize(name:, description:)
+  def initialize(id:, name:, description:)
+    @id = id
     @name = name
     @description = description
     @reserved = false
@@ -15,9 +16,18 @@ class Listing
   end
 
   def self.create(name:, description:)
-    listing = Listing.new(name: name, description: description)
-    $array.push(listing)
-    listing
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'seagull_test')
+    else
+      connection = PG.connect(dbname: 'seagull')
+    end
+
+    result = connection.exec("INSERT INTO listings (name, description, reserved) VALUES ('#{name}', '#{description}', false) RETURNING id, name, description")
+    Listing.new(id: result[0]['id'], name: result[0]['name'], description: result[0]['description'])
+
+    # listing = Listing.new(name: name, description: description)
+    # $array.push(listing)
+    # listing
   end
 
   def self.all
@@ -28,7 +38,9 @@ class Listing
     end
 
     result = connection.exec('SELECT * FROM listings')
-    result.map { |listing| listing['name'] }
+    result.map do |listing| 
+      Listing.new(id: listing['id'], name: listing['name'], description: listing['description'])
+    end
   end
 
   def reserve_switch
