@@ -21,7 +21,7 @@ def self.create(name:, description:)
 end
 
 def self.all
-  connection = PG.connect(dbname: 'seagull')
+  connection = PG.connect(dbname: 'seagull_test')
   result = connection.exec('SELECT * FROM listings')
   result.map { |listing| listing['name'] }
 end

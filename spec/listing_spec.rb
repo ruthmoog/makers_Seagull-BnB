@@ -22,15 +22,24 @@ describe Listing do
 
   describe '.all' do
     it 'Can return all instances of listing' do
-      $array = []
-      listing1 = Listing.create(name: 'Seagull Cottage', description: '4 Stars')
-      listing2 = Listing.create(name: 'Sea Shanty', description: '0 Stars')
+      connection = PG.connect(dbname: 'seagull_test')
+
+      connection.exec("INSERT INTO listings (name, description, reserved) VALUES ('Seagull Cottage', '4 Stars', false)")
+      connection.exec("INSERT INTO listings (name, description, reserved) VALUES ('Sea Shanty', '0 Stars', false)")
 
       listings = Listing.all
 
-      expect(listings.length).to eq 0
-      # expect(listings[0]).to eq listing1
-      # expect(listings[1].name).to eq 'Sea Shanty'
+      expect(listings).to include('Seagull Cottage')
+
+      # $array = []
+      # listing1 = Listing.create(name: 'Seagull Cottage', description: '4 Stars')
+      # listing2 = Listing.create(name: 'Sea Shanty', description: '0 Stars')
+
+      # listings = Listing.all
+
+      # expect(listings.length).to eq 0
+      # # expect(listings[0]).to eq listing1
+      # # expect(listings[1].name).to eq 'Sea Shanty'
     end
   end
 
