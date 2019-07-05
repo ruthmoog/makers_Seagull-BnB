@@ -51,6 +51,7 @@ I want my property to be unavailable once booked
 
 ## Set Up
 
+
 ### How to create a database using PSQL 
  - download Postgresql
  - Connect to psql in terminal with `psql`
@@ -64,3 +65,13 @@ This is required to run the tests
  - Create the database using the psql command `CREATE DATABASE seagull_test;`
  - Connect to the database using the pqsl command `\c seagull_test`
  - Run the query in `migrations/01_create_listings_table.sql`
+=======
+In the terminal use bundle to download the required gems:
+```shell
+$ bundle install
+```
+
+Run all tests in the terminal with RSpec:
+```shell
+$ rspec
+```
