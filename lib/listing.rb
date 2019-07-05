@@ -1,5 +1,4 @@
 require 'pg'
-$array = []
 
 class Listing
   attr_reader :id, :name, :description
@@ -11,9 +10,9 @@ class Listing
     @reserved = false
   end
 
-  def reserved?
-    @reserved
-  end
+  # def reserved?
+  #   @reserved
+  # end
 
   def self.create(name:, description:)
     if ENV['ENVIRONMENT'] == 'test'
@@ -24,10 +23,6 @@ class Listing
 
     result = connection.exec("INSERT INTO listings (name, description, reserved) VALUES ('#{name}', '#{description}', false) RETURNING id, name, description")
     Listing.new(id: result[0]['id'], name: result[0]['name'], description: result[0]['description'])
-
-    # listing = Listing.new(name: name, description: description)
-    # $array.push(listing)
-    # listing
   end
 
   def self.all
@@ -43,8 +38,8 @@ class Listing
     end
   end
 
-  def reserve_switch
-    reserved? ? @reserved = false : @reserved = true
-  end
+  # def reserve_switch
+  #   reserved? ? @reserved = false : @reserved = true
+  # end
 
 end

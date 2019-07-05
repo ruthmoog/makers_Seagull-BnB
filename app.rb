@@ -8,7 +8,7 @@ class Listing_manager <Sinatra::Base
   end
 
   get '/listings' do
-    @listings = $array
+    @listings = Listing.all
     erb :'listings'
   end
   
