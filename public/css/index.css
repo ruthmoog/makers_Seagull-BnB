@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+}
+
+.listing_name {
+  text-align: left;
+  color: aqua;
+}
+
+input[type="submit"] {
+  border-radius: 50px;
+  color: blue;
+}
