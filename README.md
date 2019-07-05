@@ -55,7 +55,7 @@ Environment tools include:
 - Sinatra, DSL web app framework
 - Heroku, cloud platform service
 
-## Set Up
+## Local Set Up
 
 ### How to create a database using PSQL 
  - download Postgresql
