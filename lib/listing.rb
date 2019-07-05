@@ -18,7 +18,7 @@ class Listing
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'seagull_test')
     else
-      connection = PG.connect(dbname: 'seagull')
+      connection = PG.connect(dbname: 'd41h0b119sr4k1')
     end
 
     result = connection.exec("INSERT INTO listings (name, description, reserved) VALUES ('#{name}', '#{description}', false) RETURNING id, name, description")
@@ -29,7 +29,7 @@ class Listing
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'seagull_test')
     else
-      connection = PG.connect(dbname: 'seagull')
+      connection = PG.connect(dbname: 'd41h0b119sr4k1')
     end
 
     result = connection.exec('SELECT * FROM listings')
