@@ -11,13 +11,11 @@ describe Listing do
 
   describe '.create' do
     it 'Can create a new instance of listing' do
-      $array = []
       listing = Listing.create(name: 'Seagull Cottage', description: '4 Stars')
 
       expect(listing).to be_a Listing
       expect(listing.name).to eq('Seagull Cottage')
       expect(listing.description).to eq('4 Stars')
-      expect($array[0]).to eq listing
     end
   end
 
@@ -31,16 +29,6 @@ describe Listing do
       listings = Listing.all
 
       expect(listings).to include('Seagull Cottage')
-
-      # $array = []
-      # listing1 = Listing.create(name: 'Seagull Cottage', description: '4 Stars')
-      # listing2 = Listing.create(name: 'Sea Shanty', description: '0 Stars')
-
-      # listings = Listing.all
-
-      # expect(listings.length).to eq 0
-      # # expect(listings[0]).to eq listing1
-      # # expect(listings[1].name).to eq 'Sea Shanty'
     end
   end
 

@@ -1,4 +1,4 @@
-feature 'displaying all istings' do
+feature 'displaying all listings' do
   scenario 'visit display page to see all listings' do
     visit 'listings/new'
     fill_in 'name', with: 'Seagull Cottage'
