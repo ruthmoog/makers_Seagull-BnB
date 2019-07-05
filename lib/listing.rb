@@ -18,7 +18,7 @@ class Listing
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'seagull_test')
     else
-      connection = PG.connect(dbname: 'd41h0b119sr4k1')
+      connection = PG.connect(postgres://mqqnaitkumybxx:b9501dfb0abb02d2f84c798b9478ee111cc079547b709532e5f8486a504a7713@ec2-54-75-224-168.eu-west-1.compute.amazonaws.com:5432/d41h0b119sr4k1)
     end
 
     result = connection.exec("INSERT INTO listings (name, description, reserved) VALUES ('#{name}', '#{description}', false) RETURNING id, name, description")
@@ -29,7 +29,7 @@ class Listing
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'seagull_test')
     else
-      connection = PG.connect(dbname: 'd41h0b119sr4k1')
+      connection = PG.connect(postgres://mqqnaitkumybxx:b9501dfb0abb02d2f84c798b9478ee111cc079547b709532e5f8486a504a7713@ec2-54-75-224-168.eu-west-1.compute.amazonaws.com:5432/d41h0b119sr4k1)
     end
 
     result = connection.exec('SELECT * FROM listings')
